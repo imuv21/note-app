@@ -32,7 +32,7 @@ const userSchema = new mongoose.Schema({
     otpExpiry: {
         type: Date,
     }
-});
+}, { timestamps: true });
 
 const userModel = mongoose.model("User", userSchema);
 export { userModel };

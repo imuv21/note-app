@@ -132,6 +132,7 @@ npm run dev
 | `express-rate-limit` | Request limiting           |
 | `morgan`             | HTTP logger                |
 | `cors`               | Cross-origin access        |
+| `node-cron`          | schedule cleanup           |
 
 ### 🧪 Dev Dependencies
 

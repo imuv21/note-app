@@ -3,6 +3,7 @@ dotenv.config();
 import { createServer } from "http";
 import mongoose from 'mongoose';
 import { app, initializeDB } from "./app.js";
+import { cleanupUnverifiedUsers } from './utils/cronJobs.js';
 
 const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV;
@@ -11,6 +12,7 @@ const NODE_ENV = process.env.NODE_ENV;
 const startServer = async () => {
     try {
         await initializeDB();
+        cleanupUnverifiedUsers();
         const server = createServer(app);
         server.listen(PORT, () => {
             if (NODE_ENV !== 'production') {

@@ -34,13 +34,6 @@ class authCont {
             const newUser = new userModel({ firstName: generatedFirstName, lastName: generatedLastName, email, password: hashPassword, otp, otpExpiry });
             await newUser.save();
 
-            setTimeout(async () => {
-                const user = await userModel.findOne({ email: newUser.email });
-                if (user && user.isVerified !== 1) {
-                    await userModel.deleteOne({ _id: user._id });
-                }
-            }, 2 * 60 * 1000);
-
             const signupMsg = getSignupMessage(newUser.firstName, otp);
 
             await sendMail(newUser.email, 'Verify your account', signupMsg);
