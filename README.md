@@ -44,6 +44,33 @@ cd server
 npm install
 ```
 
+### 📂 Environment Variables (`.env.local`)
+
+```
+PORT = 3000
+
+NODE_ENV = development
+
+DATABASE_URL = mongodb://localhost:27017/
+
+DB_NAME = noteApp
+
+JWT_SECRET_KEY = your key
+
+ALLOWED_ORIGINS=http://localhost:5173,https://note.netlify.app
+
+SMTP_HOST = smtp.gmail.com
+
+SMTP_PORT = 587
+
+SMTP_SERVICE = gmail
+
+SMTP_MAIL = your mail
+
+SMTP_PASSWORD = your password
+```
+
+
 ### 🔥 Start the Server
 
 ```bash
@@ -62,7 +89,7 @@ npm install
 ### 📂 Environment Variables (`.env.local`)
 
 ```
-VITE_API_BASE_URL=http://localhost:5000
+VITE_BACKEND_URL = "http://localhost:3000"
 ```
 
 ### 🚀 Start the Frontend
@@ -134,6 +161,32 @@ npm run dev       # Start backend with nodemon
 npm start        # Start the backend in production mode
 ```
 
+## 🛣️ API Endpoints
+
+### 🔐 **Auth Routes** (`/api/v1/auth`)
+
+| Method  | Endpoint               | Description                 | Auth Required |
+| ------- | ---------------------- | --------------------------- | ------------- |
+| `POST`  | `/signup`              | Register a new user         | ❌ No          |
+| `POST`  | `/verify-otp`          | Verify email OTP (signup)   | ❌ No          |
+| `POST`  | `/login`               | Login user                  | ❌ No          |
+| `POST`  | `/forgot-password`     | Request password reset OTP  | ❌ No          |
+| `POST`  | `/verify-password-otp` | Verify OTP & reset password | ❌ No          |
+| `PATCH` | `/update-profile`      | Update user profile         | ✅ Yes         |
+
+---
+
+### 🗂️ **Note Routes** (`/api/v1/note`)
+
+| Method   | Endpoint               | Description             | Auth Required |
+| -------- | ---------------------- | ----------------------- | ------------- |
+| `POST`   | `/add-note`            | Create a new note       | ✅ Yes         |
+| `GET`    | `/get-all-notes`       | Get all notes for user  | ✅ Yes         |
+| `GET`    | `/get-note/:noteId`    | Get a single note by ID | ✅ Yes         |
+| `PATCH`  | `/update-note/:noteId` | Update a note by ID     | ✅ Yes         |
+| `DELETE` | `/delete-note/:noteId` | Delete a note by ID     | ✅ Yes         |
+
+
 ---
 
 ## 🛠 Features Roadmap
@@ -147,29 +200,6 @@ npm start        # Start the backend in production mode
 * [ ] Unit tests with Vitest or Jest
 
 ---
-
-
-🛣️ API Endpoints
-
-Auth Routes (/api/v1/auth)
-
-Method	Endpoint	Description	   Auth Required
-POST	/signup	Register a new user	No
-POST	/verify-otp	Verify email OTP (signup)	No
-POST	/login	Login user	No
-POST	/forgot-password	Request password reset OTP	No
-POST	/verify-password-otp	Verify OTP & reset password	No
-PATCH	/update-profile	Update user profile	Yes
-
-Note Routes (/api/v1/note)
-
-Method	Endpoint	Description	    Auth Required
-POST	/add-note	Create a new note	Yes
-GET	    /get-all-notes	Get all notes for user	Yes
-GET	    /get-note/:noteId	Get a single note by ID	Yes
-PATCH	/update-note/:noteId	Update a note by ID	Yes
-DELETE	/delete-note/:noteId	Delete a note by ID	Yes
-
 
 ## 📄 License
 
