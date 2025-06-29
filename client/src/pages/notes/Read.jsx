@@ -34,7 +34,12 @@ const Read = () => {
     return (
         <Fragment>
             <Helmet>
-                <title>{note?.title || 'Note'} | Note App</title>
+                <title>Note App — Read</title>
+                <meta
+                    name="description"
+                    content="Read your note in full detail here."
+                />
+                <link rel="canonical" href="https://noteapp.netlify.app/read" />
             </Helmet>
 
             <div className="page">
