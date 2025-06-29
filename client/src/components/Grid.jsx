@@ -101,7 +101,7 @@ const Grid = ({ onEdit, onDelete }) => {
                 {getAllError ? (<p className='text'>Error loading notes!</p>) : !getAllLoading && !getAllError &&
                     notes && notes.length > 0 ? notes.map((note) => (
                         <NoteCard key={note._id} note={note} onEdit={onEdit} onDelete={onDelete} />
-                    )) : (<p className='text'>No notes found!</p>)}
+                    )) : (<p className='text'>No notes found! Add at least 6 notes to see the pagination.</p>)}
             </div>
 
             {!getAllLoading && !getAllError && totalNotes > size && (

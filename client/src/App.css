@@ -1717,8 +1717,9 @@ button:focus {
 
 @media (max-width: 630px) {
 
+  .grid,
   .categoryGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .categoryCont {
@@ -1815,6 +1816,21 @@ button:focus {
 }
 
 @media (max-width: 550px) {
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+  }
+  
+  .pagination-btn {
+    width: fit-content;
+    white-space: nowrap;
+    padding: 7px 5px;
+    color: var(--codeFive);
+    background-color: var(--codeOne);
+  }
 
   .note-meta {
     flex-direction: column;
