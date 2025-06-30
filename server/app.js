@@ -20,7 +20,7 @@ export const initializeDB = async () => {
 
 export const allowedOrigins = (process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : [
     "http://localhost:5173",
-    "https://note.netlify.app"
+    "https://note21.netlify.app"
 ]);
 const corsOptions = {
     origin: function (origin, callback) {
