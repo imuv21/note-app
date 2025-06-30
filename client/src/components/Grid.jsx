@@ -7,6 +7,7 @@ import Loader from './Loader';
 
 import NorthIcon from '@mui/icons-material/North';
 import SouthIcon from '@mui/icons-material/South';
+import StickyNote2OutlinedIcon from '@mui/icons-material/StickyNote2Outlined';
 
 
 const Grid = ({ onEdit, onDelete }) => {
@@ -101,7 +102,14 @@ const Grid = ({ onEdit, onDelete }) => {
                 {getAllError ? (<p className='text'>Error loading notes!</p>) : !getAllLoading && !getAllError &&
                     notes && notes.length > 0 ? notes.map((note) => (
                         <NoteCard key={note._id} note={note} onEdit={onEdit} onDelete={onDelete} />
-                    )) : (<p className='text'>No notes found! Add at least 6 notes to see the pagination.</p>)}
+                    )) : (
+                        <div className="empty-state">
+                            <StickyNote2OutlinedIcon className="empty-icon" />
+                            <h3>No Notes Found</h3>
+                            <p>Start your journey by creating your first note!</p>
+                            <p className="empty-subtitle">Add at least 6 notes to enable pagination</p>
+                        </div>
+                    )}
             </div>
 
             {!getAllLoading && !getAllError && totalNotes > size && (
