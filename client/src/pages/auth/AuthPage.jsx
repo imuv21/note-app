@@ -138,7 +138,7 @@ const AuthPage = () => {
                     name="description"
                     content="Log in to your Note App account to create and manage notes."
                 />
-                <link rel="canonical" href="https://noteapp.netlify.app/login" />
+                <link rel="canonical" href="https://note21.netlify.app/login" />
             </Helmet>
             <div className={`container ${isSignUpMode ? "sign-up-mode" : ""}`} ref={containerRef}>
                 <div className="forms-container">

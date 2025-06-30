@@ -141,7 +141,7 @@ const Dashboard = () => {
           name="description"
           content="View and manage all your notes on your Dashboard."
         />
-        <link rel="canonical" href="https://noteapp.netlify.app/" />
+        <link rel="canonical" href="https://note21.netlify.app/" />
       </Helmet>
 
       <div className="page">

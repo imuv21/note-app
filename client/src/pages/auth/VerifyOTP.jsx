@@ -119,7 +119,7 @@ const VerifyOTP = () => {
                 />
                 <link
                     rel="canonical"
-                    href="https://noteapp.netlify.app/verify-otp"
+                    href="https://note21.netlify.app/verify-otp"
                 />
             </Helmet>
 

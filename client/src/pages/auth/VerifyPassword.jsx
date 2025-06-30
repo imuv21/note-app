@@ -90,7 +90,7 @@ const VerifyPassword = () => {
                 />
                 <link
                     rel="canonical"
-                    href="https://noteapp.netlify.app/new-password"
+                    href="https://note21.netlify.app/new-password"
                 />
             </Helmet>
 

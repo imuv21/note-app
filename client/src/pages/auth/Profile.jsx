@@ -100,7 +100,7 @@ const Profile = () => {
                     name="description"
                     content="Update your profile information on Note App."
                 />
-                <link rel="canonical" href="https://noteapp.netlify.app/profile" />
+                <link rel="canonical" href="https://note21.netlify.app/profile" />
             </Helmet>
             <div className="page flexcol center">
                 <article className='w100 flex center-start'><h1 className='heading'>Profile</h1></article>

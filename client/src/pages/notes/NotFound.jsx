@@ -12,7 +12,7 @@ const NotFound = () => {
                     name="description"
                     content="Oops! The page you’re looking for doesn’t exist."
                 />
-                <link rel="canonical" href="https://noteapp.netlify.app/404" />
+                <link rel="canonical" href="https://note21.netlify.app/404" />
             </Helmet>
             <div className="notfound-container">
                 <h1 className="notfound-title">404</h1>

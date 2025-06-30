@@ -70,7 +70,7 @@ const ForgotPassword = () => {
                 />
                 <link
                     rel="canonical"
-                    href="https://noteapp.netlify.app/forgot-password"
+                    href="https://note21.netlify.app/forgot-password"
                 />
             </Helmet>
 
